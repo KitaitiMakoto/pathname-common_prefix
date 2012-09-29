@@ -53,4 +53,10 @@ class CommonPrefixTest < Test::Unit::TestCase
   def test_returns_nil_when_no_argument_passed
     assert_nil Pathname.common_prefix
   end
+
+  def test_returns_start_with
+    assert_same true, Pathname('/full/path/to/somewhere').start_with?('/full/path/to')
+    assert_same true, Pathname('/full/path/to/somewhere').start_with?('/')
+    assert_same false, Pathname('/full/path/to/somewhere').start_with?('/path/to')
+  end
 end

@@ -8,18 +8,14 @@ class Pathname
     end
   end
 
-  def common_prefix(*paths)
-    paths = paths.map {|path| Pathname(path).enum_for(:descend)}
-    last_filename = nil
-    enum_for(:descend).each do |filename|
-      break unless paths.all? {|path|
-        begin
-          filename == path.next
-        rescue StopIteration
-        end
-      }
-      last_filename = filename
-    end
-    last_filename
+  def common_prefix(*others)
+    others.map! {|path| Pathname path}
+    enum_for(:ascend).find {|path|
+      others.all?{|other|other.start_with?(path)}
+    }
+  end
+
+  def start_with?(other)
+    enum_for(:descend).include?(Pathname(other))
   end
 end
