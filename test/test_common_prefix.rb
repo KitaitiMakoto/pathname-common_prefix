@@ -28,6 +28,16 @@ class CommonPrefixTest < Test::Unit::TestCase
     assert_equal Pathname('/full'), Pathname.common_prefix(*paths)
   end
 
+  def test_returns_common_prefix_with_String
+    paths = %w[
+      /full/path/to/somewhere
+      /full/path/to/anywhere
+      /full/path/to/nowhere
+      /full/path/to/somewhere/else
+    ]
+    assert_equal Pathname('/full/path/to'), Pathname.common_prefix(*paths)
+  end
+
   def test_returns_nil_when_no_common_prefix
     paths = %w[
       /absolute/path
