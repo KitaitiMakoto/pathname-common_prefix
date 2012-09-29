@@ -54,6 +54,25 @@ class CommonPrefixTest < Test::Unit::TestCase
     assert_nil Pathname.common_prefix
   end
 
+  def test_accept_array_of_pathnames_and_or_path_strings
+    paths = %[
+        /path/to/file
+        Pathname(/path/to/another/file)
+    ]
+    assert_nothing_raised do
+      Pathname.common_prefix paths
+    end
+  end
+
+  def test_flatten_argument
+    paths = [
+        '/path/to/file',
+        '/path/to/other/file',
+        ['/path/to/another/file', '/path/to/some/file/s']
+    ]
+    assert_equal Pathname.common_prefix(*paths), Pathname.common_prefix(paths)
+  end
+
   def test_returns_start_with
     assert_same true, Pathname('/full/path/to/somewhere').start_with?('/full/path/to')
     assert_same true, Pathname('/full/path/to/somewhere').start_with?('/')
