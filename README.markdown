@@ -49,5 +49,5 @@ Usage
 License
 -------
 
-This program is distributed under the MIT license.
+This program is distributed under the Ruby's license.
 But `setup.rb` is distributed under the GNU LGPS license. See the file for more information.
