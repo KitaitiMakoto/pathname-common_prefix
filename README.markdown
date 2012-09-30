@@ -37,6 +37,18 @@ Usage
     
     Pathname.common_prefix(Pathname('/absolute/path'), Pathname('relative/path')) # => nil
 
+### String arguments
+
+    require 'pathname/common_prefix'
+    
+    paths = %w[
+      path/to/somewhere
+      path/to/anywhere
+    ]
+    
+    Pathname.common_prefix(*paths) # => #<Pathname:path/to>
+    
+
 ### Instance method
 
     require 'pathname/common_prefix'
