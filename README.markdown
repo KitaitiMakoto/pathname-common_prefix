@@ -7,6 +7,10 @@ which calcurate the common prefix in the passed paths.
 Installation
 ------------
 
+    gem install pathname-common_prefix
+
+or
+
     git clone git@github.com:KitaitiMakoto/pathname-common_prefix.git
     cd pathname-common_prefix
     ruby setup.rb
@@ -80,8 +84,8 @@ From file:
     $ common-prefix paths
     /path/to
 
-Contributor
------------
+Contributors
+------------
 
 * [@kachick](https://github.com/kachick)
 
