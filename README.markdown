@@ -44,7 +44,41 @@ Usage
     
     another = Pathname('/path/to-another/file')
     
-    base.common_prefix(other, another) #=> <Pathname:/path>
+    base.common_prefix(other, another) # => <Pathname:/path>
+
+### Command-line tool
+
+Via pipe(standard input):
+
+    $ tree book/
+    book/
+    ├── contents
+    │   ├── css
+    │   │   ├── 004.css
+    │   │   └── common.css
+    │   ├── html
+    │   │   ├── 001.html
+    │   │   ├── 002.html
+    │   │   ├── 003.html
+    │   │   ├── 004.html
+    │   │   ├── 005.html
+    │   │   └── 006.html
+    │   └── images
+    │        └── cover.png
+    └── contents.opf
+    
+    4 directories, 10 files
+    $ find book -name '*.html' | common-prefix
+    book/contents/html
+
+From file:
+
+    $ cat paths
+    /path/to/somewhere
+    /path/to/anywhere
+    /path/to/nowhere
+    $ common-prefix paths
+    /path/to
 
 License
 -------
