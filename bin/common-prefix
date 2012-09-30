@@ -3,6 +3,7 @@ require 'optparse'
 require_relative '../lib/pathname/common_prefix'
 
 opt = OptionParser.new do |opt|
+  opt.version = '0.0.1'
   opt.banner = <<EOB
 Usage: common-prefix
     Show prefix common to pathnames from standard input
