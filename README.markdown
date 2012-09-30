@@ -80,6 +80,11 @@ From file:
     $ common-prefix paths
     /path/to
 
+Contributor
+-----------
+
+* [@kachick](https://github.com/kachick)
+
 License
 -------
 
