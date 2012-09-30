@@ -55,11 +55,9 @@ Usage
     
     base = Pathname('/path/to/base/file')
     other = Pathname('/path/to/other/file')
-    
     base.common_prefix(other) # => <Pathname:/path/to>
     
     another = Pathname('/path/to-another/file')
-    
     base.common_prefix(other, another) # => <Pathname:/path>
 
 ### Command-line tool
