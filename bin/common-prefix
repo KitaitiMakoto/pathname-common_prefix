@@ -13,7 +13,7 @@ EOB
 end
 opt.parse!
 
-paths = ARGF.lines.select {|line| line !~ /^$/}.collect(&:chomp)
+paths = ARGF.each_line.select {|line| line !~ /^$/}.collect(&:chomp)
 begin
   puts Pathname.common_prefix(paths)
 rescue => err
