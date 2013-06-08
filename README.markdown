@@ -2,7 +2,7 @@ Pathname common_prefix
 ======================
 
 This file provides `Pathname.common_prefix` and `Pathname#common_prefix`
-which calcurate the common prefix in the passed paths.
+which calculate the common prefix in the passed paths.
 
 Installation
 ------------
