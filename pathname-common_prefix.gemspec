@@ -4,7 +4,7 @@ Gem::Specification.new do |gem|
   gem.authors       = ['KITAITI Makoto']
   gem.email         = ['KitaitiMakoto@gmail.com']
   gem.description   = 'This file provides `Pathname.common_prefix` and `Pathname#common_prefix` which calculate the common prefix in the passed paths.'
-  gem.summary       = 'Calcurate prefix commont to some pathnames'
+  gem.summary       = 'Calculate prefix commont to some pathnames'
   gem.homepage      = 'https://gitlab.com/KitaitiMakoto/pathname-common_prefix'
 
   gem.files         = %w[
