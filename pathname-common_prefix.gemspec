@@ -16,6 +16,7 @@ Gem::Specification.new do |gem|
                          README.markdown
                          Rakefile setup.rb
                          pathname-common_prefix.gemspec
+                         Steepfile sig/pathname-common_prefix.rbs
                       ]
   gem.executables   = %w[common-prefix]
   gem.test_files    = %w[test/test_common_prefix.rb]
