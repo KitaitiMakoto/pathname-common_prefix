@@ -1,0 +1,11 @@
+default:
+  image: ruby:3.2.2
+
+  before_script:
+    - gem install test-unit steep
+
+test:
+  variables:
+    RB_SYS_FORCE_INSTALL_RUST_TOOLCHAIN: 'true'
+  script:
+    - rake
