@@ -3,8 +3,8 @@ require 'pathname'
 class Pathname
   class << self
     def common_prefix(*paths)
-      return if paths.empty?
       paths.flatten!
+      return if paths.empty?
       Pathname(paths.pop).common_prefix(paths)
     end
   end
