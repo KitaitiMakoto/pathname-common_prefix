@@ -2,7 +2,7 @@ default:
   image: ruby:3.2.2
 
   before_script:
-    - gem install test-unit steep
+    - gem install test-unit rubygems-tasks steep
 
 test:
   variables:
