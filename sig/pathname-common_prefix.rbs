@@ -7,7 +7,7 @@ class Pathname
   def start_with?: (pathnamable other) -> bool
 end
 
-type pathnamable = Array[pathnamable] | Pathname | _ToStr
+type pathnamable = Array[pathnamable] | Pathname | string
 
 # Class just for type checking
 class NonEmptyArray[T] < Array[T]
