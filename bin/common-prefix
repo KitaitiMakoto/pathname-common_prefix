@@ -1,9 +1,10 @@
 #!/usr/bin/env ruby
 require 'optparse'
+require "rubygems/specification"
 require_relative '../lib/pathname/common_prefix'
 
 opt = OptionParser.new do |opt|
-  opt.version = '0.0.1'
+  opt.version = Gem::Specification.load(File.join(__dir__, "../pathname-common_prefix.gemspec")).version
   opt.banner = <<EOB
 Usage: common-prefix
     Show prefix common to pathnames from standard input
