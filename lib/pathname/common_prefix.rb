@@ -4,8 +4,8 @@ class Pathname
   class << self
     def common_prefix(*paths)
       paths.flatten!
-      return if paths.empty?
-      Pathname(paths.pop).common_prefix(paths) # @type var paths: Array[Pathname | String]
+      return if paths.empty? # @type var paths: Array[Pathname | String]
+      Pathname(paths.pop).common_prefix(paths) # @type var paths: NonEmptyArray[Pathname]
     end
   end
 
