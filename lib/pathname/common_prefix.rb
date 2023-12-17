@@ -5,13 +5,13 @@ class Pathname
     def common_prefix(*paths)
       paths.flatten!
       return if paths.empty?
-      Pathname(paths.pop).common_prefix(paths)
+      Pathname(paths.pop).common_prefix(paths) # @type var paths: Array[Pathname | String]
     end
   end
 
   def common_prefix(*others)
     others.flatten!
-    others.map! {|path| Pathname path}
+    others.map! {|path| Pathname path} # @type var others: Array[Pathname | String]
     enum_for(:ascend).find {|path|
       others.all?{|other|other.start_with?(path)}
     }
