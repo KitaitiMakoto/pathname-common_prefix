@@ -2,10 +2,12 @@
 
 # Classes
 class Pathname
-  def self.common_prefix: (*Array[Array[_ToStr] | _ToStr] | Pathname | _ToStr paths) -> Pathname?
-  def common_prefix: (*Array[Array[_ToStr] | Pathname | _ToStr] others) -> Pathname?
-  def start_with?: (Pathname | _ToStr other) -> bool
+  def self.common_prefix: (*Array[Array[pathnamable] | pathnamable] | pathnamable paths) -> Pathname?
+  def common_prefix: (*Array[Array[pathnamable] | pathnamable] others) -> Pathname?
+  def start_with?: (pathnamable other) -> bool
 end
+
+type pathnamable = Pathname | _ToStr
 
 # Class just for type checking
 class NonEmptyArray[T] < Array[T]
