@@ -6,3 +6,8 @@ class Pathname
   def common_prefix: (*Array[Array[String] | Pathname | String] others) -> Pathname?
   def start_with?: (Pathname | String other) -> bool
 end
+
+# Class just for type checking
+class NonEmptyArray[T] < Array[T]
+  def pop: -> T
+end
