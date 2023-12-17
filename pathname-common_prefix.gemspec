@@ -7,6 +7,8 @@ Gem::Specification.new do |gem|
   gem.summary       = 'Calculate prefix commont to some pathnames'
   gem.homepage      = 'https://gitlab.com/KitaitiMakoto/pathname-common_prefix'
 
+  gem.metadata["source_code_uri"] = "https://gitlab.com/KitaitiMakoto/pathname-common_prefix"
+
   gem.files         = %w[
                          lib/pathname/common_prefix.rb
                          test/test_common_prefix.rb
