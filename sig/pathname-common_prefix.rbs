@@ -1,0 +1,8 @@
+# TypeProf 0.21.8
+
+# Classes
+class Pathname
+  def self.common_prefix: (*Array[Array[String] | String] | Pathname | String paths) -> Pathname?
+  def common_prefix: (*Array[Array[String] | Pathname | String] others) -> Pathname?
+  def start_with?: (Pathname | String other) -> bool
+end
