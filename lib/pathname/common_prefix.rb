@@ -21,7 +21,7 @@ class Pathname
     }
   end
 
-  def start_with?(other)
-    enum_for(:descend).include?(Pathname(other))
+  def start_with?(prefix)
+    enum_for(:descend).include?(Pathname(prefix))
   end
 end
