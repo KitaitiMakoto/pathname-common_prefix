@@ -3,6 +3,7 @@ default:
 
   before_script:
     - gem install test-unit rubygems-tasks steep
+    - gem install rbs -v 3.4.0 --pre
 
 test:
   variables:
