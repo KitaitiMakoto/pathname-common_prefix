@@ -17,7 +17,7 @@ class Pathname
     # @type var others: Array[Pathname]
     enum_for(:ascend).find {|path|
       # @type path: pathnamable
-      others.all?{|other|other.start_with?(path)}
+      others.all? {|other|other.start_with?(path)}
     }
   end
 
