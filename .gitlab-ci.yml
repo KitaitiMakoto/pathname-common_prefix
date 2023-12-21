@@ -2,8 +2,7 @@ default:
   image: ruby:3.2.2
 
   before_script:
-    - gem install test-unit rubygems-tasks steep
-    - gem install rbs -v 3.4.0.pre.1
+    - gem install test-unit rubygems-tasks steep rbs
 
 test:
   variables:
