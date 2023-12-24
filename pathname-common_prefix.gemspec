@@ -1,6 +1,6 @@
 Gem::Specification.new do |gem|
   gem.name          = 'pathname-common_prefix'
-  gem.version       = '0.0.1'
+  gem.version       = '0.0.2'
   gem.authors       = ['KITAITI Makoto']
   gem.email         = ['KitaitiMakoto@gmail.com']
   gem.description   = 'This file provides `Pathname.common_prefix` and `Pathname#common_prefix` which calculate the common prefix in the passed paths.'
